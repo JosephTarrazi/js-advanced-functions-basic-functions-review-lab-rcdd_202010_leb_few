@@ -1,12 +1,40 @@
 // Your code here
-function saturdayFun(activity="roller-skate") {
-    return(`This Saturday, I want to ${activity}!`);
+function saturdayFun(someWhere="roller-skate") {
+return `This Saturday, I want to ${someWhere}!`
 }
-function mondayWork(activity="go to the office") {
-    return `This Monday, I will ${activity}.`;
+saturdayFun()
+
+let mondayWork = function(willDo="go to the office"){
+ return `This Monday, I will ${willDo}.` 
+}
+mondayWork()
+
+function wrapAdjective (style="*") {
+  return function(stringOne="special"){
+    return `You are ${style}${stringOne}${style}!`
+  }
 }
 
-function wrapAdjective(flair="*") {
-    return function encouragingPromptFunction(param="special") {
-        return `You are ${flair}${param}${flair}!`;
-    }}
+let Calculator = {
+  add: function (a,b){
+    return a+b
+  } ,
+  subtract: (a,b) => {
+    return a - b
+  } ,
+  multiply: (a,b) => {
+    return a * b
+  } ,
+  divide: (a,b) => {
+    return a / b
+  } ,
+}
+
+
+function actionApplyer (start, array){
+  let a = start
+    for(let i = 0; i < array.length; i++){
+       a = array[i](a)
+      }
+    return a
+}
